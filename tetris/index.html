@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				background: url(img/dp5.jpg) no-repeat center ;
+				background-size:cover;
+			}
+			.MainFrame
+			{
+				border: 1px solid burlywood;
+				margin: 10px auto;
+				position: relative;
+				border-top: 1px solid #097886;
+				border-bottom: 1px solid #097886;
+				
+			}
+			.MainFramediv
+			{
+				box-sizing:border-box;
+				float: left;
+				margin: 1px;
+				position: absolute;
+				border-right:1px solid #0d2d4817;
+				border-bottom:1px solid #0d2d4817;
+				border-radius: 4px;
+			}
+			.smallDiv
+			{
+				margin: 1px;
+				position: absolute;
+			}
+			.smallDivblack
+			{
+				/*float: left;*/
+				margin: 1px;
+				/*margin: 1px;*/
+				position: absolute;
+				/*z-index: 2;*/
+			}
+			
+			#tetris{
+				width: 50%;
+				margin: 0 auto;
+				padding: 0;
+				border: 5px solid #09788614;
+				
+			}
+			#tetris:after{
+				content:  "";
+				Display:  block;
+				Clear:  both;
+			}
+			
+			#control{
+				float: left;
+				border: 1px solid #097886;
+				width: 150px;
+				height: 578px;
+				margin-top: 10px;
+				margin-left: 20px;
+				padding-top: 30px;
+				font-size: 24px;
+				font-weight: 400;
+				color: #097886;
+				text-align: center;
+			}
+			#level,#regame{
+				
+				width: 100px;
+				height: 30px;
+				border: none;
+				font-size: 16px;
+				color: #097886;
+				font-weight: 300;
+				border-radius: 5px;
+			}
+			#level{
+				font-size: 16px;
+				padding-left: 16px;
+				font-weight:bold;
+			}
+			#control p{
+				margin-top: 200px;
+			}
+			#regame{
+				margin-top: 100px;
+				font-weight: 600;
+				background-color:#fff;
+				border-radius: 5px;
+			}
+			
+			#TFrime{
+				float: left;
+			}
+			.direction{
+				color: #f80202b8;
+				}
+			#info{
+				float: left;
+				border: 1px solid #097886;
+				width: 150px;
+				height: 578px;
+				margin: 10px auto;
+				padding-top: 30px;
+				text-align: center;
+				color: #097886;
+				font-size: 24px;
+				font-weight: 400;
+			}
+			#nextfigure{
+				width: 100px;
+				height: 100px;
+				background-color: #8d75546b;
+				margin: 0 auto;
+				margin-bottom: 100px;
+				position: relative;
+				border-radius: 15px;
+				margin-top:70px;
+			}
+			.drawdiv{
+				background-color: red;
+				margin: 1px;
+				border: 1px solid silver;
+				position: absolute;
+			}
+			 #main{margin: 0px auto;position: relative;}
+    #main div{overflow: hidden;position: fixed;width:  120px;height: 120px;opacity: 0.5;
+        -webkit-border-radius: 50%;border-radius: 50%;z-index: 100;}
+		</style>
+		<script src="js/GameFrame.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/graph.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body onLoad="initGame()">
+		<div id="tetris" >
+			<div id="control">
+				难度：
+				<div><select id="level" onChange="changespeed()">
+					<option value="300">简单</option>
+					<option value="100">一般</option>
+					<option value="80">困难</option>
+				</select></div>
+				<input type="button" id="regame" value="重 新 开 始" onClick="regame()" />
+				<p class="direction">
+					↑ ：变换<br />
+					←：左移<br />
+					→：右移<br />
+					↓：加速<br />
+				</p>
+			</div>
+			<div id="TFrime"></div>
+			<div id="info">
+				下一个图形:
+				<div id="nextfigure">
+				</div>
+				<div>分数：<span id="score">0</span></div>
+			</div>
+		</div>
+		<div style="text-align:center;">
+</div>
+	</body>
+</html>
+
+  
